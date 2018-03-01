@@ -1,0 +1,81 @@
+<ion-view>
+        <ion-pane> 
+            <ion-header-bar class="header">            
+                        <div style="color:#fff; "class="h1 title">LISTES ELEVES</div>
+                        <button style="color:#fff;" class="button button-icon icon ion-android-more-vertical" ng-click="openPopover($event)"></button>
+            </ion-header-bar>
+            <br>
+            <br>
+            
+            <ion-content >
+              <ion-list >
+                  <div>
+                    
+                    <div class="col col-6 col-offset-2">
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Heure Du Debut</span><br>
+                            <select name="heured" id="heured"  ng-model="appel.debut" ng-options="heure as heure.debut+' h '+heure.fin for heure in heures" required="true">
+                              <option value="">--select--</option>
+                          </select>
+                        </label>
+                    </div>
+                    <div class="col col-6 col-offset-2">
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Heure De fin</span><br>
+                            <select name="heuref" id="heuref"  ng-model="appel.fin" ng-options="heure as heure.debut+' h '+heure.fin for heure in heures" required="true">
+                              <option value="">--select--</option>
+                          </select>
+                        </label>
+                    </div>
+                   <!-- <div class="col col-6 col-offset-2">
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Heure Du Debut</span>
+                            <input type="text" name="ville" placeholder="heure du debut du cours" ng-model="data.debut">
+                        </label>
+                    </div>
+                    <div class="col col-6">
+                      <label class="item item-input item-stacked-label">
+                          <span class="input-label">Heure De Fin</span>
+                          <input type="text" name="ville" placeholder="Heure de fin du cours Fin" ng-model="data.fin">
+                      </label>
+                    </div> -->
+                   </div>
+                   <br>
+                   <!-- <a class="item item-avatar" ng-repeat="eleve in listeseleves" ng-click="appelPourCours()">
+                      <img src="img/img.png">
+                      <h2>{{eleve.nom}}</h2>
+                      <p>{{eleve.prenom}} {{eleve.age}} Ans</p>   
+                    </a>-->
+                  
+                    <li class="item item-toggle" ng-repeat="eleve in listeseleves">
+                       <h2 style="font-size:1.2em;"> <b>{{eleve.nom}}</b>  {{eleve.prenom}} {{$config.URI.image}}</h2>
+                       <center><img src="{{$config.image}}{{eleve.image}}"></center>
+                       <p style = "color:#11c1f3"> {{eleve.age}} Ans</p>
+                       <label class="toggle toggle-assertive">
+                         <input type="checkbox" ng-model="eleve.status">
+                         <div class="track">
+                           <div class="handle"></div>
+                         </div>
+                       </label>
+
+                    </li>
+                    <button class="button notificationBtn button-block" type="submit" ng-click="verifieabsence(listeseleves, appel)">Valider appel</button>
+                    <div style="height:50px;"></div>
+              </ion-list >
+
+         </ion-content>
+             <div class="bar bar-footer positive">
+                <div class="tabs tabs-icon-only">
+                    <a class="tab-item" ng-href="tel: 677594166">
+                      <i class="icon ion-android-call"></i>
+                    </a>
+                    <a class="tab-item" ng-click="findByCodeBarre()">
+                      <i class="icon ion-ios-barcode-outline"></i>
+                    </a>
+                    <a ui-sref="administration" class="tab-item">
+                       <i class="icon ion-ios-fastforward-outline"></i>
+                    </a>
+               </div>
+             </div>
+        </ion-pane>
+    </ion-view>

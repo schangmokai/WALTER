@@ -1,0 +1,33 @@
+<ion-view>
+        <ion-pane> 
+            <ion-header-bar class="header">            
+                        <div style="color:#fff; "class="h1 title">LISTES</div>
+                        <button style="color:#fff;" class="button button-icon icon ion-android-more-vertical" ng-click="openPopover($event)"></button>
+            </ion-header-bar>
+            <br>
+            <br>
+            
+            <ion-content >
+               <div class="col col-6 col-offset-2">
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Vous êtes sur le point de remplir les notes <br>du cours de {{intitule}}
+                            <br>Selectionnez la sequence SVP!!<br></span><br>
+                            <select name="sequence" id="sequence"  ng-model="selection.valeurSequence" ng-options="squence as sequence.val  for sequence in sequences" required="true">
+                              <option value="">--select--</option>
+                          </select>
+                        </label>
+                    </div>
+               <div class="row" ng-repeat="element in listeseleves">
+                 <div class="col-sm-90 card" style="width: 90%; height: 30px; padding-left: 10px; padding-top: 5px;">
+                    {{element.nom}} {{element.prenom}}
+                 </div>
+                <div class="col-sm-10 card" style=" padding-bottom:10px;  height: 30px; padding-left: 5px; width: 40px;">
+                    <input type="text" name="" ng-model="element.note">
+                </div>
+               </div> 
+               <button style="width: 90%; margin-left: 15px; margin-right: 5px;" class="button notificationBtn" type="submit" ng-click="valider(listeseleves)">Enregistrer</button>
+
+            </ion-content>
+             
+        </ion-pane>
+    </ion-view>

@@ -1,0 +1,82 @@
+<ion-view>
+        <ion-pane> 
+            <ion-header-bar class="header">            
+                        <div style="color:#fff; "class="h1 title">LISTES ELEVES</div>
+                        <button style="color:#fff;" class="button button-icon icon ion-android-more-vertical" ng-click="openPopover($event)"></button>
+            </ion-header-bar>
+            <br>
+            <br>
+            
+            <ion-content >
+              <ion-list >
+                 
+                   <br>
+                  
+
+                    <div  ng-repeat="inscription in inscriptions">
+                       <ion-card > 
+                        <div class="item item-avatar">
+                              
+                           <img src="{{$config.image}}{{inscription.eleve.image}}">
+                        
+                        <h2>{{inscription.eleve.nom}}</h2>
+                        <p>{{inscription.eleve.prenom}}</p>
+                       </div>
+
+                      <div class="item item-body">
+                        <a href="" ng-click="station('Hotel')">
+                          <img class="full-image" src="{{$config.image}}{{inscription.eleve.image}}"s>
+                        </a>
+                        <div ng-if="inscription.status==3">
+                            <p style="color: #00a65a">
+                              Mr/Mlle {{inscription.eleve.nom}} {{inscription.eleve.prenom}} de la classe de {{inscription.eleve.classe.intitule}} est completement solvable
+                            </p>
+                        </div>
+                        <div ng-if="inscription.status!=3">
+                            <p style="color: #d44" >
+                              Mr/Mlle {{inscription.eleve.nom}} {{inscription.eleve.prenom}} de la classe de {{inscription.eleve.classe.intitule}} n'est qu'a {{inscription.status}} sur {{inscription.nombredetranche}} donc il n'est pas totalement solvable
+                            </p>
+                        </div>
+                         
+                        <p>
+                          <a href="#" class="subdued">{{inscription.status}} tranche(s)  Sur </a>
+                          <a href="#" class="subdued">{{inscription.nombredetranche}} Tranche(s)</a>
+                        </p>
+                      </div>
+
+                      <div class="item tabs tabs-secondary tabs-icon-left">
+                        <a class="tab-item" href="#">
+                          <i class="icon ion-thumbsup"></i>
+                          Like
+                        </a>
+                        <a class="tab-item" href="#">
+                          <i class="icon ion-chatbox"></i>
+                          Comment
+                        </a>
+                        <a class="tab-item" href="#">
+                          <i class="icon ion-share"></i>
+                          Share
+                        </a>
+                      </div>
+                    </ion-card > 
+             </div>
+                    
+                    <div style="height:50px;"></div>
+              </ion-list >
+
+         </ion-content>
+             <div class="bar bar-footer positive">
+                <div class="tabs tabs-icon-only">
+                    <a class="tab-item" ng-href="tel: 677594166">
+                      <i class="icon ion-android-call"></i>
+                    </a>
+                    <a class="tab-item" ng-click="findByCodeBarre()">
+                      <i class="icon ion-ios-barcode-outline"></i>
+                    </a>
+                    <a ui-sref="administration" class="tab-item">
+                       <i class="icon ion-ios-fastforward-outline"></i>
+                    </a>
+               </div>
+             </div>
+        </ion-pane>
+    </ion-view>

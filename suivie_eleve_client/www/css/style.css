@@ -1,0 +1,46 @@
+/* Empty. Add your own CSS if you like */
+.pull-left{
+	float: right;
+	
+}
+
+.transparent {
+  /*background: transparent !important;*/
+  margin-top: 0%;
+  background-color: rgba(0,0,0,0.4);
+  padding-left: 7%;
+  padding-right: 7%;
+  height: 50%;
+  border-radius: 10px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 95%;
+  
+}
+
+.header{
+  background-color: #fa4858;
+
+}
+
+.notificationBtn{
+   background-color: #ecb701;
+}
+
+.backgrounds{
+  background-color: #ecb701;
+}
+
+
+.student-image{
+  margin:0px!important;
+  border-bottom: 3px solid #EF473A;
+}
+
+
+.floating-menu{
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 99;
+ }

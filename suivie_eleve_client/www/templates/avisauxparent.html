@@ -1,0 +1,77 @@
+<ion-view>
+        <ion-pane>
+            <ion-header-bar class="header">  
+                          
+                        <div style="color:#fff;" class="h1 title">AVIS AUX PARENTS</div>
+                        <button style="color:#fff;" class="button button-icon icon ion-android-more-vertical" ng-click="openPopover($event)"></button>
+            </ion-header-bar>
+               <ion-content  padding="true" style="background-color: #fff">
+
+                        <div class="card" style="margin-top:2%;"> 
+
+                           <div class="item item-divider item-input-wrapper">
+                              Remplissez les informations
+                            </div>
+                            <div class="list" ng-form="myform">
+
+
+                                <div class="item item-input item-stacked-label item-input-wrapper validated">
+                                    <span class="input-label">Date&nbsp;<span class="required-field">*</span></span>
+                                    <input type="date" maxlength="30" minlength="2" id="date" ng-model="data.date" name="nom" required="required"  placeholder="entrer la date de l'evenement"/>
+                                </div>
+
+                                <div class="item item-input item-stacked-label item-input-wrapper validated">
+                                    <span class="input-label">heure&nbsp;<span class="required-field">*</span></span>
+                                    <input type="text" maxlength="30" minlength="2" id="heure" ng-model="data.heure" name="nom" required="required"  placeholder="entrer l'heure de l'evenement"/>
+                                </div>
+
+                                <div class="item item-input item-stacked-label item-input-wrapper validated">
+                                    <span class="input-label">lieux&nbsp;<span class="required-field">*</span></span>
+                                    <input type="text" maxlength="30" minlength="2" id="lieux" ng-model="data.lieux" name="ville" required="required"  placeholder="entrer le lieux de l'evenement"/>
+                                </div>
+                              
+                                
+                                <div class="item item-input item-stacked-label item-input-wrapper validated">
+                                    <span class="input-label">Ecole&nbsp;<span class="required-field">*</span></span>
+                                    <input type="text" maxlength="30" minlength="2" id="ecole" ng-model="data.ecole" name="ville" required="required"  placeholder="entrer l'ecole ou l'evenement"/>
+                                </div>
+
+                                
+
+                             </div>
+
+                          </div>
+                          <div class="card validated">
+                                      <div class="item item-divider item-input-wrapper">
+                                        publier l'information
+                                      </div>
+                                  <div class="list">
+                                    <div class="row">
+                                      <div class="col col-50">
+                                        <ion-item  ng-disabled="!myform.$valid" class = "button button-block button-assertive item-text-wrap" ng-click="ValiderLavis(data)"><i class="icon ion-android-notifications"></i>&nbsp;Valider&nbsp;<span class="required-field">*</span></ion-item>
+                                      </div>
+                                      <div class="col col-50">
+                                      <ion-item class ="button button-block button-assertive item-text-wrap" ng-click = "annuler()"><i class="icon ion-close-circled"></i>&nbsp;Annuler&nbsp;<span class="required-field">*</span></ion-item>
+                                      </div>
+                                    </div>
+                                    
+                                </div>
+                          </div> 
+                
+                          <div style="height:50px;"></div>      
+            </ion-content>
+             <div class="bar bar-footer positive">
+                <div class="tabs tabs-icon-only">
+                    <a class="tab-item" ng-href="tel: 677594166">
+                      <i class="icon ion-android-call"></i>
+                    </a>
+                    <a class="tab-item" ng-click="findByCodeBarre()">
+                      <i class="icon ion-ios-barcode-outline"></i>
+                    </a>
+                    <a ui-sref="administration" class="tab-item">
+                       <i class="icon ion-ios-fastforward-outline"></i>
+                    </a>
+               </div>
+             </div>
+        </ion-pane>
+    </ion-view>

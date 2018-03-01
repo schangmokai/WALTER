@@ -1,0 +1,57 @@
+<ion-view>
+        <ion-pane>
+            <ion-header-bar class="header">         
+                        <div style="color:#fff;" class="h1 title ">LISTES DES ELEVES</div>
+                        <button style ="color:#fff;" class="button button-icon icon ion-android-more-vertical" ng-click="openPopover($event)"></button>
+            </ion-header-bar>
+            <ion-content>
+             <div class="row">
+                  <div class="col col-6 col-offset-2">
+                      <button  style="box-shadow: 0 3px 6px 0 #111; margin-left: 10%; color:#fff;" ng-click="etats()" class="button icon-left ion-pie-graph header">Statistiques</button>
+                  </div>
+                  <div class="col col-6">
+                    <button  style="box-shadow: 0 3px 6px 0 #111; color:#fff;" class="button icon-left ion-person-add header" ng-click="appelPourCours()">
+                        Appel cours
+                    </button> 
+                  </div>
+              </div> 
+              <div class="list">
+                   
+                   <!-- <a class="item item-avatar" ng-repeat="eleve in listeseleves" ng-click="appelPourCours()">
+                      <img src="img/img.png">
+                      <h2>{{eleve.Student.nom}}</h2>
+                      <p>{{eleve.Student.prenom}} {{eleve.Student.age}} Ans</p>   
+                    </a>-->
+
+                    <li class="item" ng-repeat="eleve in listeseleves">
+                      <div class="row" >
+                        <div class="col col-60" style="overflow:height">
+                           <h2 style="font-size:1.2em;"> <b>{{eleve.nom}}</b>  {{eleve.prenom}}</h2>
+                           <p style = "color:#11c1f3">{{eleve.age}} Ans</p>
+                        </div>
+                        <div class="pull-left col col-40">
+                           <button style="box-shadow: 0 3px 6px 0 #111; font-size:0.85em; color:#fff;" class="button icon-left ion-android-notifications notificationBtn" ng-click="blame(eleve)">
+                            Notification
+                          </button> 
+                        </div>
+                    </li>
+                    <div style="height:50px;"></div>
+                    
+              </div>
+
+         </ion-content>
+             <div class="bar bar-footer positive">
+                <div class="tabs tabs-icon-only">
+                    <a class="tab-item" ng-href="tel: 677594166">
+                      <i class="icon ion-android-call"></i>
+                    </a>
+                    <a class="tab-item" ng-click="findByCodeBarre()">
+                      <i class="icon ion-ios-barcode-outline"></i>
+                    </a>
+                    <a ui-sref="administration" class="tab-item">
+                       <i class="icon ion-ios-fastforward-outline"></i>
+                    </a>
+               </div>
+             </div>
+        </ion-pane>
+    </ion-view>

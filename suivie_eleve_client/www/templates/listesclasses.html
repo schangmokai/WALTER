@@ -1,0 +1,68 @@
+<ion-view>
+      
+
+        <ion-pane>
+            <ion-header-bar class="header">           
+                        <div class="h1 title" style="color:#fff;">LISTES DES CLASSES</div>
+                        <button style="color:#fff;" class="button button-icon button-clear ion-ios-barcode-outline" ng-click="findByCodeBarre()"></button>
+            </ion-header-bar>
+
+          <!-- <ion-floating-menu menu-color="#E42112" menu-open-color="#E42112">
+                <ion-floating-item button-color="#E42112" icon="ion-search" click="myEvent()"></ion-floating-item>
+                <ion-floating-item button-color="#E42112" icon="ion-ios-barcode-outline" click="myEvent()"></ion-floating-item>
+            </ion-floating-menu> -->
+
+        <ion-content style="background-color: #fff">
+    
+
+         
+          <ion-list >
+              <div ng-repeat="classe in listeclasses"> 
+                    <div class="card" ng-if="((classe.id)%2==1)" >
+                       <a ng-click="toto(classe)">
+                          <div class="item" style="background-color: #caeaf3;">
+                            <h2 style="font-size:1.8em;">{{classe.code}}</h2>
+                            <p style = "color:#11c1f3">{{classe.intitule}}</p>
+                          </div>
+                       </a> 
+                    </div>
+                    <div class="card" ng-if="((classe.id)%2!=1)" >
+                       <a ng-click="toto(classe)">
+                          <div class="item">
+                            <h2 style="font-size:1.8em;">{{classe.code}}</h2>
+                            <p style = "color:#11c1f3">{{classe.intitule}}</p>
+                          </div>
+                       </a> 
+                    </div>
+              </div>
+              <div style="height:50px;"></div>
+          </ion-list>
+
+          <!--<div class="list">
+
+              <a class="item item-avatar" ng-repeat="classe in listeclasses">
+                <img src="venkman.jpg">
+                <h2>{{classe.code}}</h2>
+                <p>{{classe.intitule}}</p>
+              </a>
+
+              ...
+
+          </div>-->
+
+        </ion-content>
+             <div class="bar bar-footer positive">
+                <div class="tabs tabs-icon-only">
+                    <a class="tab-item" ng-href="tel: 677594166">
+                      <i class="icon ion-android-call"></i>
+                    </a>
+                    <a class="tab-item" ng-click="findByCodeBarre()">
+                      <i class="icon ion-ios-barcode-outline"></i>
+                    </a>
+                    <a ui-sref="administration" class="tab-item">
+                       <i class="icon ion-ios-fastforward-outline"></i>
+                    </a>
+               </div>
+             </div>
+        </ion-pane>
+    </ion-view>
