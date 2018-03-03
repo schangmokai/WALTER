@@ -1,0 +1,81 @@
+<ion-view >
+  
+  <ion-content class="backgroundcorps">
+  <div class="bar bar-header" style="background-color: #1b9eea; height: 50px;">
+		  <img style="height: 50px; width: 50px; margin-top: -6px;" src="img/logo.png">
+		  <div class="h1 title montitre">Siren</div>
+  </div>
+  <br><br><br><br> 
+  <center><p>{{ 'RECAPITULATIF' | translate }}</p></center>
+  <div class="row">
+  	 <div class="col-sm-50 dateheure2">
+  	    Date et heure :
+  	 </div>
+  	 <div class="col-sm-50 dateheure3">
+  	 	{{date}} {{heure}}h{{minute}}
+  	 </div>
+  </div>
+  <div class="row">
+  	 <div class="col-sm-50 dateheure2">
+  	 	 Localisation :
+  	 </div>
+  	 <div class="col-sm-50 dateheure3">
+  	 	{{coordonnees.latitude}} | {{coordonnees.longitude}}
+  	 </div>
+  </div>
+  <div class="row">
+  	 <div class="col-sm-50 dateheure2">
+  	 	 Type d'observation :
+  	 </div>
+  	 <div class="col-sm-50 dateheure3">
+  	 	 {{observation.nom_fr}}
+  	 </div>
+  </div>
+  <div class="row">
+  	 <div class="col-sm-50 dateheure2">
+  	 	 Groupe :
+  	 </div>
+  	 <div class="col-sm-50 dateheure3">
+  	 	 {{groupe.nom_fr}}
+  	 </div>
+  </div>
+  <div class="row">
+  	 <div class="col-sm-50 dateheure2">
+  	 	 Sous espèces :
+  	 </div>
+  	 <div class="col-sm-50 dateheure3">
+  	 	 {{sous_espece.nom_fr}}
+  	 </div>
+  </div>
+  <div class="row">
+  	 <div class="col-sm-50 dateheure2">
+  	   Espèces :
+  	 </div>
+  	 <div class="col-sm-50 dateheure3">
+  	 	 {{espece.nom_fr}}
+  	 </div>
+  </div>
+ 
+  <div class="row" ng-if="question!=0">
+  	 <div ng-if="question!=0" class="col-sm-50 dateheure2">
+  	 	 {{question}} :
+  	 </div>
+  	 <div ng-if="question!=0"  class="col-sm-50 dateheure3">
+  	 	 {{reponse}}
+  	 </div>
+  </div>
+  <div class="row" ng-repeat="reponse in mesreponses">
+     <div class="col-sm-50 dateheure2">
+       {{reponse.questions.titre_fr}}
+     </div>
+     <div class="col-sm-50 dateheure3">
+      {{reponse.titre_fr}}
+     </div>
+  </div> 
+  <button class="button button-float" ng-click="showActionsheet()">
+        <i class="icon ion-checkmark"></i>
+  </button>
+   <div style="height:75px;"></div>
+  </ion-content>
+  
+</ion-view>

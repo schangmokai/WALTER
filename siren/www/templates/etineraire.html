@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Travel modes in directions</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script src="script-tags-for-development.js"></script>
+    
+  </head >
+		  <body ng-app="ngMap">
+
+					<ion-view view-title="Etineraire">
+					  <ion-content>
+					     
+			                  <ng-map  center="douala" zoom="18" >
+			                    <marker position="current" animation="Animation.BOUNCE"></marker>
+			                      <directions 
+			                        draggable="true"
+			                        panel="directions-panel"
+			                        animation="Animation.BOUNCE"
+			                        travel-mode="{{travelMode}}"
+			                        origin="{{depart}}"
+			                        destination="{{arrive}}">
+			                      </directions>
+			                  </ng-map> 
+			        
+					  </ion-content>
+					</ion-view>
+
+		   </body>
+
+</html>

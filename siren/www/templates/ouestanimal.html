@@ -1,0 +1,32 @@
+<ion-view view-title="{{titrequestion}}">
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-content class="backgroundcorps">
+    
+  <ion-list>
+    <!--<ion-checkbox class="card blockbuttontextouesanimal" ng-model="filter.red"> En Mer</ion-checkbox>
+    <ion-checkbox class="card blockbuttontextouesanimal" ng-model="filter.yellow">Dans la rivière</ion-checkbox>
+    <ion-checkbox class="card blockbuttontextouesanimal" ng-model="filter.pink">Dans le lac</ion-checkbox>
+    <ion-checkbox class="card blockbuttontextouesanimal" ng-model="filter.zock">Dans la mangrove</ion-checkbox>
+    <ion-checkbox class="card blockbuttontextouesanimal" ng-model="filter.tock">Autres</ion-checkbox>-->
+    <ion-radio ng-repeat="reponse in listesreponses" ng-value="reponse" class="card blockbuttontextouesanimal" ng-model="data.responses">{{reponse.titre_fr}}</ion-radio>
+
+    
+  </ion-list>
+
+  <div class="blockbutton">
+      <br>
+      <button ng-click="sirin()" class="button  icon-right ion-chevron-right  button-block button-calm">
+      {{ 'SUIVANT' | translate }}
+    </button>
+    
+  </div>  
+   <div style="height:75px;"></div>
+  </ion-content>
+</ion-view>

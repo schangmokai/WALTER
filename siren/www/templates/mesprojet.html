@@ -1,0 +1,25 @@
+<ion-view view-title="{{titre}}">
+  <ion-content class="backgroundcorps">
+
+      <div class="list" ng-if="testeur==0">
+        <div ng-click="findObservationByProjet(element.id)" class="card observation item item-button-right" ng-repeat="element in mesprojets">
+          <p style="margin-left: 0%; font-size: 20px; padding-top: 4px; padding-bottom: 8px;">{{element.nom}}</p>
+          <p style="margin-left: 0%; font-size: 20px; color:#1b9eea ; padding-top: 4px; padding-bottom: 8px;">{{element.lieu}}</p>
+          <button style="height: 100%; margin-top:-2%; margin-right: -15px; padding-top: 0%" class="button button-stable">
+            <i class="icon ion-checkmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="list" ng-if="testeur!=0">
+        <div class="card observation item item-button-right" ng-repeat="element in mesobservationsparprojets">
+          <p style="margin-left: 0%; font-size: 20px; padding-top: 4px; padding-bottom: 8px;">{{element.note}}  {{element.alpha}}</p>
+          <p style="margin-left: 0%; font-size: 20px; color:#1b9eea ; padding-top: 4px; padding-bottom: 8px;">{{element.date}}</p>
+          <button style="height: 100%; margin-top:-2%; margin-right: -15px; padding-top: 0%" class="button button-stable">
+            <i class="icon ion-checkmark"></i>
+          </button>
+        </div>
+      </div>
+       <div style="height:75px;"></div>
+  </ion-content>
+</ion-view>

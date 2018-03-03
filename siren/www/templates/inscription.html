@@ -1,0 +1,69 @@
+<ion-view >
+  
+  <ion-content class="backgroundcorps">
+  <div class="bar bar-header" style="background-color: #1b9eea; height: 50px;">
+		  <img style="height: 50px; width: 50px; margin-top: -6px;" src="img/logo.png">
+		  <div class="h1 title">{{ 'INSCRIPTION' | translate }}</div>
+  </div>
+  <br><br><br><br> 
+  <center ng-if="temoininscription==0"><p>{{ 'INFOSC' | translate }}</p></center>
+
+	<div  ng-if="temoininscription==0" class=" list formlogin">
+	    <input type="text"  ng-model="utilisateur.email" placeholder=" Email" style="background: transparent;">
+	    <hr style=" background-color: black; height: 1px">
+	    <input type="password" ng-model="utilisateur.password" placeholder=" Mot de passe" style="background: transparent;">
+	    <hr style=" background-color: black; height: 1px">
+	    <center><p >{{ 'INFOSP' | translate }}</p></center>
+
+	     <label class = "item-input moninput" style="background: transparent; ">
+		   <div class = "input-label">
+		      Pays
+		   </div>
+		   <select class="monselect" ng-model="utilisateur.pays" ng-init="pays='Cameroun'">
+		      <option value="{{pays.id}}" ng-repeat="pays in listepays">{{pays.nom_fr}}</option>
+		   </select>
+		</label>
+       
+	    <hr style=" background-color: black; height: 1px">
+	    <input type="text" ng-model="utilisateur.telephone" value="{{paysselect.code_tel}}" placeholder=" Téléphone
+	    " style="background: transparent;">
+	    <hr style=" background-color: black; height: 1px">
+	    <input type="text" ng-model="utilisateur.ville" placeholder="Ville" style="background: transparent; color: black;">
+	    <hr style=" background-color: black; height: 1px">
+	   
+
+	    <label class = "item-input moninput" style="background: transparent; ">
+		   <div class = "input-label">
+		      {{ 'FONCTIONS' | translate }}
+		   </div>
+			
+		   <select class="monselect" ng-model="utilisateur.fonction">
+		      <option value="{{fonctions.id}}" ng-repeat="fonctions in listefonctions">{{fonctions.nom_fr}}</option>
+		   </select>
+		</label>
+		<hr style=" background-color: black; height: 1px">
+	</div>
+    
+    <div ng-if="temoininscription==0" class="blockbutton">
+    	
+	    <button ng-click="inscrire(utilisateur)" class="button button-small button-block button-calm">
+		  {{ 'INSCRIRE' | translate }}
+		</button>
+		
+	</div>	 
+
+    <center ng-if="temoininscription==1"><p>{{ 'INFOS' | translate }}</p></center>
+
+    
+    <img ng-if="temoininscription==1" style="height: 25%; width: 25%;  margin-left: 40%; margin-top: 10%;" src="img/valid.png">
+
+	<div ng-if="temoininscription==1" class="blockbutton">
+    	<br>
+	    <button ng-click="connecte()" class="button button-small button-block button-calm">
+		  {{ 'CONNEXION' | translate }}
+		</button>
+		
+	</div>	 
+    
+  </ion-content>
+</ion-view>

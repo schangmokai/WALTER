@@ -1,0 +1,14 @@
+<ion-view view-title=" {{ 'NOTIFICATION' | translate }}">
+  <ion-content class="backgroundcorps">
+
+      <div class="list">
+        <div class="card observation item item-button-right" ng-repeat="element in notifications">
+          <p style="margin-left: 0%; font-size: 20px; padding-top: 8px; padding-bottom: 8px;">{{element.nom_fr}}</p>
+          <button style="height: 100%; margin-top:-2%; margin-right: -15px; padding-top: 0%" class="button button-stable">
+            <i class="icon ion-checkmark"></i>
+          </button>
+        </div>
+      </div>
+       <div style="height:75px;"></div>
+  </ion-content>
+</ion-view>

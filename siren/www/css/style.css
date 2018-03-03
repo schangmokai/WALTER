@@ -1,0 +1,384 @@
+/* Empty. Add your own CSS if you like */
+.breakline{
+  flex-wrap: wrap!important;
+}
+.required-field{
+  color: #F00!important;
+  font-weight: bolder;
+}
+
+.button-circle{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+}
+
+.image{
+    
+    position: center;
+    margin-left: 35%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    cursor: pointer;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+}
+
+.logo{
+    
+    position: center;
+    margin-left: 37%;
+    margin-top: 12%;
+    margin-bottom: 0%;
+    cursor: pointer;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+}
+
+.background{
+    background-image: url("../img/back2.jpg");
+}
+
+.backgroundcorps{
+    background-image: url("../img/back1.jpg");
+    width: 100%;
+    height: 100%;
+}
+
+.profil{
+   /*background-color: rgba(26, 158, 233, 0.6);*/
+   background-color: #1b9eea;
+}
+.texte{
+     color: rgba(255, 255, 255, 0.8);
+     margin-bottom: 0%;
+     padding-bottom: 12%;
+}
+.textelogin{
+    color: rgba(255, 255, 255, 0.8);
+     margin-bottom: 0%;
+     padding-bottom: 8%;
+}
+
+.tex{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.texte2{
+     color: rgba(255, 255, 255, 0.8);
+     margin-bottom: 0%;
+     padding-bottom: 12%;
+     font-size: 10px;
+}
+
+.textesacceuil{
+   padding-top: 5%;
+   font-size: 15px;
+}
+
+.formlogin{
+     margin-left: 10%;
+     margin-right: 10%;
+     
+}
+
+.blockbutton{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.blockbuttontext{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 20%; 
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.blockbuttontextouesanimal{
+    margin-left: 10%;
+    margin-right: 10%;
+    box-shadow: 2px 2px 5px #888888;
+    
+}
+
+
+input{
+    width: 100%;
+    color: red;
+}
+
+.formlogin2{
+     margin-left: 10%;
+     margin-right: 10%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.premier{
+    width: 100px;
+    height: 100px;
+}
+
+.cardpremier{
+   padding-left: 20px;
+   padding-top: 10px;
+   padding-right: 20px;
+   margin-left: 15px;
+   box-shadow: 5px 5px 5px #888888;
+   resize:none;
+   width: 50%;
+   overflow: hidden;
+}
+
+.cardpremieracceuil{
+   padding-left: 20px;
+   padding-top: 10px;
+   padding-right: 20px;
+   margin-left: 10px;
+   box-shadow: 5px 5px 5px #888888;
+   background-color: #1b9eea;
+   resize:none;
+   width: 50%;
+   overflow: hidden;
+
+}
+
+
+.rowacceuil{
+    padding-bottom: 0%;
+    margin-bottom: -8%;
+    margin-right: 0%;
+
+}
+
+.infos{
+    margin-top: 20%;
+}
+
+.monselect{
+  width: 70%;
+}
+
+.moninput{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.espece{
+     margin-left: 60px;
+     padding-top: 12px;
+}
+
+.infosespece{
+     font-size: 2px;
+     padding-right: 0px;
+}
+.pinfoespece{
+    font-size: 1px;
+    margin-right: 0px;
+    margin-left:25555px;
+}
+
+
+.pespece{
+    font-weight: bold;
+}
+
+.crocodile{
+    margin-left: 75px;
+    font-weight: bold;
+}
+/** For well **/
+[well]{
+    width: 100%;
+    padding-top: 10px;
+    overflow: hidden;
+    background-color: #ddd;
+}
+[well-header]{
+    width: 100%;
+    padding-left: 120px;
+    padding-bottom: 10px;
+    font-size: 5vw;
+    font-weight: bolder;
+    text-align: center;
+}
+[well-body]{
+
+}
+[well-body-image]{
+    position: absolute;
+    margin-top: -39px;
+    border-radius: 100%;
+    margin-left: 2%;
+}
+[well-body-image] img{
+    width: 80px;
+    height: 80px;
+}
+[well-body-content]{
+    width: 100%;
+    padding-left: 120px;
+    overflow: hidden;
+    background-color: #fff;
+    padding-bottom: 10px;
+    font-size: 3vw;
+}
+[well-body-content] p{
+
+}
+
+.dateheure{
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.dateheure2{
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 50%;
+    overflow: hidden;
+}
+
+.montitre{
+    color:  #fff;
+}
+
+.dateheure3{
+    margin-top: 10px;
+    color: red;
+    margin-left: 50%;
+    position: absolute;
+    width: 50%;
+    overflow: hidden;
+}
+
+.dateheuree{
+
+   margin-top: 10px;
+   color: red;
+   margin-left:10px; 
+   margin-right: 10px; 
+   padding-left: 3px; 
+   padding-right: 3px;
+   text-align: justify;
+}
+
+.button-float{
+  background: #1b9eea !important;
+  color:white !important;
+  z-index: 12 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+  position: fixed;
+  bottom: 0px;
+  right: 0px; 
+  position: absolute;
+}
+
+.button-rounded{
+  transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+
+ .floating-menu{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+ }
+
+
+
+.observation{
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) !important;
+    height: 10%;
+    margin-top: 3%;
+}
+
+.heure{
+    margin-left: 75%; 
+    margin-top: 2%; 
+    color: blue;
+}
+
+.block-img {
+  height: 200px;
+}
+
+.popup-body textarea{
+  background:#e4e6e8 !important;
+  height: 120px;
+}
+
+.popup-head{
+
+}
+
+.popup-title{
+  
+}
+
+.popup-buttons{
+    
+}
+
+
+.image-list-thumb {
+    padding: 2px 2px 2px 2px;
+    height: 100px;
+}
+ 
+.image-modal {
+    width: 100% !important;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+}
+ 
+.transparent {
+    background: transparent !important;
+}
+ 
+.fullscreen-image {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+ 
+.slider {
+    width: 100%;
+    height: 100%;
+}

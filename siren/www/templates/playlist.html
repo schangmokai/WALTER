@@ -1,0 +1,80 @@
+<ion-view view-title="Playlist">
+  <ion-content>
+
+      
+		   <div class="card">
+		      <div class="item item-divider item-input-wrapper">
+		       zozo
+		      </div>
+		  <div class="list">
+		      <div class="item item-input item-stacked-label item-input-wrapper validated">
+		        <span class="input-label"> toto &nbsp;<span class="required-field">*</span></span> 
+		        <input type="hidden" required="true" name="customerstype_id" id="customerstype_id" ng-model="data.customerstype.id"/>
+
+		        <button type="button" modal-title="le mokai" class="button button-block button-light" modal-select ng-model="data.customerstype" options="sources.customerstypes" modal-title=""
+		        search-properties="search_properties" has-search="true"
+		        header-footer-class="bar-assertive"
+		        sub-header-class="bar-assertive"        
+		        hide-reset="true"
+		        >
+		            toto
+		            <div class="option">
+		                ozo
+		            </div>
+		        </button>
+		      </div>
+		      <div class="item item-input item-stacked-label item-input-wrapper validated">
+		        <span class="input-label">12333 &nbsp;<span class="required-field">*</span></span>
+		        <input type="tel" maxlength="9" minlength="9" id="isdn" ng-model="data.isdn" name="isdn" required="required"  placeholder="ozozozzo"/>
+		        <span class="badge badge-positive" ng-click="checkIsdn(1)" ng-if="data.isdn.length==9&&data.isdn!='000000000'" style="margin-top:-10px;">
+		          <i class="ion ion-ios-refresh"></i>
+		        </span>
+		      </div>
+		      <div class="item item-input item-stacked-label item-input-wrapper validated">
+		        <span class="input-label">12333 &nbsp;<span class="required-field">*</span></span>
+		        <input type="tel" maxlength="9" minlength="9" id="isdn" ng-model="data.isdn" name="isdn" required="required"  placeholder="ozozozzo"/>
+		        <span class="badge badge-positive" ng-click="checkIsdn(1)" ng-if="data.isdn.length==9&&data.isdn!='000000000'" style="margin-top:-10px;">
+		          <i class="ion ion-ios-refresh"></i>
+		        </span>
+		      </div>
+		       <div class="item item-input item-stacked-label item-input-wrapper validated">
+		        <span class="input-label">12333 &nbsp;<span class="required-field">*</span></span>
+		        <input type="tel" maxlength="9" minlength="9" id="isdn" ng-model="data.isdn" name="isdn" required="required"  placeholder="ozozozzo"/>
+		        <span class="badge badge-positive" ng-click="checkIsdn(1)" ng-if="data.isdn.length==9&&data.isdn!='000000000'" style="margin-top:-10px;">
+		          <i class="ion ion-ios-refresh"></i>
+		        </span>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card validated">
+		      <div class="item item-divider item-input-wrapper">
+		        7283836
+		      </div>
+		    <div class="list">
+		      <div class="row">
+		        <div class="col col-50">
+		          <ion-item  ng-disabled="data.customerstype.id<1" class = "button button-block button-balanced item-text-wrap" ng-click = "takePicture1()"><i class="ion ion-camera"></i>&nbsp;87837373&nbsp;<span class="required-field">*</span></ion-item>
+		        </div>
+		        <div class="col col-50">
+		        <ion-item ng-disabled="data.customerstype.id<1" class ="button button-block button-balanced item-text-wrap" ng-click = "takePicture2()"><i class="ion ion-camera"></i>&nbsp;ieuieeueie&nbsp;<span class="required-field">*</span></ion-item>
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="col col-50">
+		          <button type="button" ng-if="data.file_url1!=''" class="button button-block button-dark" ng-click="preview(data.file_url1)">76736736</button>
+		        </div>
+		          <div class="col col-50">
+		          <button type="button" ng-if="data.file_url2!=''" class="button button-block button-dark" ng-click="preview(data.file_url2)">87272672</button>
+		        </div>
+		      </div>
+		      <div class="row">
+		          <input type="hidden" required="true" name="file_url3" ng-model="data.file_url3"/>
+		          <button type="button" ng-if="data.file_url3!=''" class="button button-block button-dark" ng-click="preview(data.file_url3)">82728272</button>
+		      </div>
+		    </div>
+		  </div>
+		 
+     <div style="height:75px;"></div>
+  </ion-content>
+</ion-view>
+

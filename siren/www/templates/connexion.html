@@ -1,0 +1,41 @@
+<ion-view>
+  <ion-content class="background">
+    <div class="logologin">
+       <img class="logo" src="img/logo.png">
+	   <center><p class="textelogin">Siren</p></center>
+	</div>
+
+	<div class="formlogin">
+	    <input type="text" ng-model="utilisateur.login" placeholder=" Email ou téléphone" style="background: transparent;  color: #fff; ">
+	    <hr>
+	    <input type="password" ng-model="utilisateur.password" placeholder=" Mot de passe" style="background: transparent; color: #fff;">
+	    <hr>
+	</div>
+   
+	<div class="row ">
+      <div class="col-sm-50 formlogin">
+      	<a ng-click="inscription()"><p class="texte2">nouveau ? s'incrire</p></a>
+      </div>
+      <div class="col-sm-50 formlogin2">
+      	<a ng-click="forguetpassword()"><p class="texte2"> mots de passe oublié? </p></a>
+      </div>
+	  
+	</div>
+    <div class="blockbutton">
+	    <button ng-click="login(utilisateur)" class="button button-small button-block button-calm">
+		  CONNEXION
+		</button>
+		<!--<center class="tex">ou</center>
+         <button class="button button-small button-block button-positive">
+		  Se Connecter avec Facebook
+		</button>
+		<button class="button  button-small button-block button-calm">
+		  Se connecter avec Twitter
+		</button>
+		<button class="button  button-small button-block button-assertive">
+		  Se connecter avec Google +
+		</button>-->
+	</div>	 
+   
+  </ion-content>
+</ion-view>

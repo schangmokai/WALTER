@@ -1,0 +1,27 @@
+<ion-view view-title="{{titrequestion}}">
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-content class="backgroundcorps">
+    
+
+      <div class="card blockbuttontext">
+         <input style="margin-left: 15px;" type="text" ng-model="donnees.mareponse" name="" placeholder="  Entrer un nombre">
+
+         
+      </div>
+      <div class="blockbutton">
+          <br>
+          <button ng-click="ouestlanimal(donnees)" class="button  icon-right ion-chevron-right  button-block button-calm">
+           {{ 'SUIVANT' | translate }}
+        </button>
+        
+      </div>  
+   <div style="height:75px;"></div>
+  </ion-content>
+</ion-view>

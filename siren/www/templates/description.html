@@ -1,0 +1,27 @@
+<ion-view view-title="{{ 'OBSERVATION' | translate }}">
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-content class="backgroundcorps">
+
+
+      <div class="formlogin" style="margin-top: 20px;">
+        <textarea style="width: 100%;" type="text" ng-model="monobservation.description" placeholder=" une description de l'observation"></textarea>
+        <hr>
+      
+      </div>
+
+     
+      <button style="border-radius: 50px; width: 80%; margin-left: 10%;" ng-click="suivant(monobservation)" class="button icon-right ion-chevron-right button-block button-assertive">
+         {{ 'SUIVANT' | translate }}
+      </button>
+        
+     <div style="height:75px;"></div>
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,66 @@
+<ion-view view-title="Obstacle">
+  <ion-content>
+     <div class="card">
+		     <div class="item item-divider item-input-wrapper">
+		       Renseigner un Déplacement
+		      </div>
+		     <div class="list" ng-form="myform">
+		      
+		      <div class="item item-input item-stacked-label item-input-wrapper validated">
+                <span class="input-label">Départ&nbsp;<span class="required-field">*</span></span>
+                <input type="text" maxlength="30" minlength="5" id="tel" ng-model="data.depart" name="depart" required="required"  placeholder="Ville de départ"/>
+             </div>
+             <div class="item item-input item-stacked-label item-input-wrapper validated">
+                <span class="input-label">Arrivé&nbsp;<span class="required-field">*</span></span>
+                <input type="text" maxlength="30" minlength="5" id="tel" ng-model="data.arrive" name="arrive" required="required"  placeholder="Ville d'arrivé"/>
+                
+             </div>
+		     <div class="item item-input item-stacked-label item-input-wrapper validated">
+		        <div class="choix">
+                    <b>Mode De Deplacement: </b>
+                      <select ng-model="travelMode" ng-init="travelMode='DRIVING'">
+                        <option value="DRIVING">Driving</option>
+                        <option value="WALKING">Walking</option>
+                        <option value="BICYCLING">Bicycling</option>
+                        <option value="TRANSIT">Transit</option>
+                      </select>
+                </div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="card validated">
+		      <div class="item item-divider item-input-wrapper">
+		        Valider le deplacement
+		      </div>
+		    <div class="list">
+		       <div class="row">
+	                <div class="col col-50">
+	                  <ion-item  ng-disabled="!myform.$valid" class = "button button-block button-positive item-text-wrap" ng-click="valider()"><i class="icon ion-person-add"></i>&nbsp;Valider&nbsp;<span class="required-field">*</span></ion-item>
+	                </div>
+	                <div class="col col-50">
+	                <ion-item class ="button button-block button-positive item-text-wrap" ng-click = "annuler()"><i class="icon ion-close-circled"></i>&nbsp;Annuler&nbsp;<span class="required-field">*</span></ion-item>
+	                </div>
+	           </div>
+		  </div>
+		</div>
+		  <div class="card validated">
+		      <div class="item item-divider item-input-wrapper">
+		        enregistrer un obstacle
+		      </div>
+		    <div class="list">
+		      
+		      <div class="row">
+		      	<br>
+		      	<br>
+		      	<br>	
+		      	
+		      </div>
+		      <div class="row">
+		          <input type="hidden" required="true" name="file_url3" ng-model="data.file_url3"/>
+		          <button type="button" ng-if="data.file_url3!=''" class="button button-block button-dark" ng-click="preview(data.file_url3)">Enregistrer un obstracle</button>
+		      </div>
+		    </div>
+		  </div>
+		  <div style="height:75px;"></div>
+  </ion-content>
+</ion-view>

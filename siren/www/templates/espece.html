@@ -1,0 +1,51 @@
+<ion-view view-title="{{ 'SELECTIONESPECE' | translate }}">
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-content class="backgroundcorps">
+      <!--<a class="item item-thumbnail-left" href="#">
+        <img src="img/logo.png">
+        <div class="espece">
+           <p class="pespece">Crocodiles</p>
+        </div>
+        <div class="infosespece">
+          <p class="pinfosespece">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit</p>
+        </div>
+      </a>-->
+   <div well>
+      <div well-header> 
+        <p>{{especeelement.nom_fr}}</p>
+      </div>
+     <div well-body>
+        <div well-body-image>
+          <img src="{{especeelement.image}}">
+        </div>
+       <div well-body-content>
+          <p>{{especeelement.description_fr}}</p>
+        </div>
+     </div>
+   </div>
+
+       <div class='grid'>
+          <div class="row breakline">
+              <div ng-repeat="item in listeespeces" ng-click="nombrepetit(item)" class="col-50">
+                  <div class="list card">
+                     <center><img style="padding-top: 5px;" class="premier" src="{{item.image}}" /></center> 
+                    <center ng-if="langue.valeur == 'fr'"><strong><p>{{item.nom_fr}}</p></strong></center>
+                    <center ng-if="langue.valeur == 'en'"><strong><p>{{item.nom_en}}</p></strong></center>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+     <div style="height:75px;"></div>
+  </ion-content>
+
+</ion-view>

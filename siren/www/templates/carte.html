@@ -1,0 +1,23 @@
+<ion-view view-title="{{ 'BIENVENUS' | translate }}">
+  <ion-content class="backgroundcorps">
+    
+     <center><strong><p class="textesacceuil">{{ 'AJOUTEROBSERVATION' | translate }}</p></strong></center>
+        
+     <div ng-repeat="item in listetypeobservations">
+       <div class="row rowacceuil" ng-if="$even" >
+           <div ng-click="groupe(listetypeobservations[$index])" class="col-sm-50 card cardpremieracceuil">
+             <center><img class="premier" src="{{listetypeobservations[$index].image}}"></center> 
+              <center ng-if="langue.valeur == 'fr'"><p style="color: #fff">{{listetypeobservations[$index].nom_fr}}</p></center>
+              <center ng-if="langue.valeur == 'en'"><p style="color: #fff">{{listetypeobservations[$index].nom_fr}}</p></center>
+           </div>
+           <div  ng-click="groupe(listetypeobservations[$index +1])" class="col-sm-50 card cardpremieracceuil">
+              <center><img class="premier" src="{{listetypeobservations[$index +1].image}}"></center>
+              <center ng-if="langue.valeur == 'fr'"><p style="color: #fff">{{listetypeobservations[$index +1].nom_fr}}</p></center>
+              <center ng-if="langue.valeur == 'en'"><p style="color: #fff">{{listetypeobservations[$index +1].nom_fr}}</p></center>
+           </div>
+       </div>
+     </div>
+
+  <div style="height:75px;"></div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,24 @@
+<ion-view view-title=" {{ 'MESOBSERVATION' | translate }}">
+  
+  <button class="floating-menu button-rounded button button-positive ion-ion-plus" ng-click="plusobservation()"><i class="icon ion-plus"></i></button>
+  
+  <ion-content class="backgroundcorps">
+      
+      <div class="list">
+
+        <div class="card observation item item-button-right" ng-repeat="element in observations">
+          <p style="margin-left: 0%; font-size: 20px; padding-top: 5px;">{{element.date}}</p>
+          <p style="margin-left: 0%; margin-top:3%; position: absolute;">{{element.note}}</p>
+          <p style="margin-left: 80%; margin-top: 5%; color: #1b9eea">{{element.heure}}h{{element.minute}}</p>
+          <button style="height: 100%; margin-top:-2%; margin-right: -15px; padding-top: 0%" class="button button-stable">
+            <i class="icon ion-checkmark"></i>
+          </button>
+        </div>
+
+      </div>
+      
+      
+      <div style="height:75px;"></div>
+      
+  </ion-content>
+</ion-view>

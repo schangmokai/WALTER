@@ -1,0 +1,106 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+    <ion-content>
+      
+        <!--<ion-item menu-close ng-click="login()">
+          Login
+        </ion-item>-->
+        <div class="profil">
+          <img class="image" src="img/logo.png">
+           <center><p class="texte">{{userconnecte.username}}</p></center>
+        </div>
+ 
+        <ion-list>
+        <!--<ion-item menu-close ng-click="login()">
+          Login
+        </ion-item>-->
+          <ion-item menu-close href="#/app/acceuil">
+            <i class="icon ion-home"></i>
+             {{ 'AJOUTEROBSERVATION' | translate }}
+          </ion-item>
+          <ion-item menu-close href="#/app/profils">
+            <i class="icon ion-person"></i>
+            {{ 'PROFIL' | translate }}
+          </ion-item>
+          <ion-item menu-close href="#/app/langue">
+            <i class="icon ion-chatbox"></i>
+            {{ 'LANGUE' | translate }}
+          </ion-item>
+          <ion-item menu-close href="#/app/mesprojet">
+            <i class="icon ion-soup-can-outline"></i>
+           {{ 'MESPROJETS' | translate }}
+          </ion-item>
+           <ion-item menu-close href="#/app/projet">
+            <i class="icon ion-transgender"></i>
+            {{ 'CHANGEPROJET' | translate }}
+          </ion-item>
+           <ion-item menu-close href="#/app/mesobservation">
+            <i class="icon ion-document-text"></i>
+            {{ 'MESOBSERVATION' | translate }}
+          </ion-item>
+          <ion-item menu-close href="#/app/notification">
+            <i class="icon ion-chatbubbles"></i>
+           {{ 'MESNOTIFICATION' | translate }}
+          </ion-item>
+
+          <ion-item menu-close href="#/app/commentaire">
+            <i class="icon ion-mic-a"></i>
+            {{ 'COMMANTAIRE' | translate }}
+          </ion-item>
+         
+          <ion-item menu-close href="#/app/carte">
+            <i class="icon ion-android-image"></i>
+             {{ 'ALLEZSURCARTE' | translate }}
+          </ion-item>
+          <ion-item menu-close href="#/app/synchronisation">
+            <i class="icon ion-android-image"></i>
+             {{ 'SYNCRONISATION' | translate }}
+          </ion-item>
+          <ion-item menu-close href="#/app/login">
+            <i class="icon ion-log-out"></i>
+              {{ 'DECONNEXION' | translate }}
+          </ion-item>
+          
+        </ion-list>
+
+        <!--<div class="list">
+          <a  class="item item-icon-left" ng-click="acceuil()">
+            <i class="icon ion-home"></i>
+            Acceuil
+          </a>
+          <a class="item item-icon-left " href="#">
+            <i class="icon ion-person"></i>
+             Profil
+          </a>
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-mic-a"></i>
+            Langue
+          </a> 
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-document-text"></i>
+             Mes Observations
+          </a>
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-android-image"></i>
+             Afficher la carte
+          </a>
+          <a ng-click="login()" class="item item-icon-left" href="#">
+            <i class="icon ion-log-out"></i>
+             Déconnexion
+          </a>
+        </div>-->
+        <div style="height:75px;"></div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

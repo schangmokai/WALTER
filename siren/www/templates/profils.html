@@ -1,0 +1,62 @@
+<ion-view view-title="{{ 'PROFIL' | translate }}">
+  <ion-content class="backgroundcorps">
+    
+     <div class="profil">
+          <img class="image" src="img/logo.png">
+           <center><p class="texte">{{userconnecte.username}}</p></center>
+    </div>
+        
+     <div class="row">
+     <div class="col-sm-50 dateheure2">
+        Date de creation :
+     </div>
+     <div class="col-sm-50 dateheure3">
+      {{date}}
+     </div>
+  </div>
+  <div class="row">
+     <div class="col-sm-50 dateheure2">
+       Username :
+     </div>
+     <div class="col-sm-50 dateheure3">
+      {{userconnecte.username}}
+     </div>
+  </div>
+  
+  <div class="row">
+     <div class="col-sm-50 dateheure2">
+       Ville :
+     </div>
+     <div class="col-sm-50 dateheure3">
+       {{userconnecte.ville}}
+     </div>
+  </div>
+  <div class="row">
+     <div class="col-sm-50 dateheure2">
+       Pays :
+     </div>
+     <div class="col-sm-50 dateheure3">
+       {{userconnecte.pays.nom_fr}}
+     </div>
+  </div>
+  <div class="row">
+     <div class="col-sm-50 dateheure2">
+       Email :
+     </div>
+     <div class="col-sm-50 dateheure3">
+       {{userconnecte.email}}
+     </div>
+  </div>
+ 
+  <div class="row">
+     <div class="col-sm-50 dateheure2">
+       Fonction :
+     </div>
+     <div class="col-sm-50 dateheure3">
+       {{userconnecte.fonctions.nom_fr}}
+     </div>
+  </div>
+
+  <div style="height:75px;"></div>
+  </ion-content>
+</ion-view>

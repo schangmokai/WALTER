@@ -1,0 +1,28 @@
+<ion-view view-title="{{ 'SELECTIONEGROUPE' | translate }}">
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-content class="backgroundcorps">
+    
+   <div ng-repeat="groupe in listegroupes">
+     <div class="row rowacceuil" ng-if="$even">
+         <div ng-click="sous_espece(listegroupes[$index])" class="col-sm-50 card cardpremier">
+           <center><img class="premier" src="{{listegroupes[$index].image}}"></center> 
+            <center ng-if="langue.valeur == 'fr'"><strong><p>{{listegroupes[$index].nom_fr}}</p></strong></center>
+            <center ng-if="langue.valeur == 'en'"><strong><p>{{listegroupes[$index].nom_en}}</p></strong></center>
+         </div>
+         <div ng-click="sous_espece(listegroupes[$index+1])" class="col-sm-50 card cardpremier">
+            <center><img class="premier" src="{{listegroupes[$index +1].image}}"></center>
+            <center ng-if="langue.valeur == 'fr'"><strong><p>{{listegroupes[$index+1].nom_fr}}</p></strong></center>
+            <center ng-if="langue.valeur == 'en'"><strong><p>{{listegroupes[$index+1].nom_en}}</p></strong></center>
+         </div>
+     </div>
+    </div>
+     
+     <div style="height:75px;"></div>
+</ion-view>

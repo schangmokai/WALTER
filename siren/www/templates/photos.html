@@ -1,0 +1,87 @@
+<ion-view view-title="{{ 'OBSERVATION' | translate }}">
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-content class="backgroundcorps">
+
+    <div ng-if="pointeur == 1">
+      <div class="item item-divider">
+        <i class="ion-images"></i>
+        {{ 'MESIMAGES' | translate }}
+      </div>
+      <a class="item item-list-detail">
+        <ion-scroll direction="x">
+          <img ng-repeat="image in allImages" ng-src="{{image.src}}" ng-click="showImages($index)" class="image-list-thumb"/>
+        </ion-scroll>
+      </a>
+    </div>
+     <div class="card" ng-if="pointeur == 0">
+           <div class="item item-divider item-input-wrapper">
+                <center>Image 1</center>  
+           </div>
+              <div ng-if="image1==1" class="item block-img">
+                  <img style="height: 250%; width: 100%;" ng-src="{{ observationAff.image1 }}" ng-model="observation.image1">
+              </div>
+              <div class="padding text-center"> 
+               <a class="button icon button-positive ion-camera" ng-click="takePhotoD1()"></a>
+               <a ui-sref="photos" class="button icon button-positive  ion-image" ng-click="takePhotoDD1()"></a>
+               <a ui-sref="photos" class="button icon button-positive  ion-trash-a"  ng-click="deleteimage1()"></a>
+              </div>
+
+      </div>
+      <div class="card" ng-if="pointeur == 0">
+              <div class="item item-divider item-input-wrapper">
+                  <center>Image 2</center>  
+              </div>
+              <div ng-if="image2==1" class="item block-img">
+                  <img style="height: 250%; width: 100%;" ng-src="{{ observationAff.image2 }}" ng-model="observation.image2">
+              </div>
+              <div class="padding text-center"> 
+               <a class="button icon button-positive ion-camera" ng-click="takePhotoD2()"></a>
+               <a ui-sref="photos" class="button icon button-positive  ion-image" ng-click="takePhotoDD2()"></a>
+               <a ui-sref="photos" class="button icon button-positive  ion-trash-a"  ng-click="deleteimage2()"></a>
+              </div>
+
+      </div>
+      <div class="card" ng-if="pointeur == 0">
+           <div class="item item-divider item-input-wrapper">
+                <center>Image 3</center>  
+           </div>
+              <div ng-if="image3==1" class="item block-img">
+                  <img style="height: 250%; width: 100%;" ng-src="{{ observationAff.image3 }}" ng-model="observation.image2">
+              </div>
+              <div class="padding text-center"> 
+               <a class="button icon button-positive ion-camera" ng-click="takePhotoD3()"></a>
+               <a ui-sref="photos" class="button icon button-positive  ion-image" ng-click="takePhotoDD3()"></a>
+               <a ui-sref="photos" class="button icon button-positive  ion-trash-a"  ng-click="deleteimage3()"></a>
+              </div>
+
+      </div>
+      <div class="card" ng-if="pointeur == 0">
+           <div class="item item-divider item-input-wrapper">
+                <center>Image 4</center>  
+           </div>
+              <div ng-if="image4==1" class="item block-img">
+                  <img style="height: 250%; width: 100%;" ng-src="{{ observationAff.image4 }}" ng-model="observation.image2">
+              </div>
+              <div class="padding text-center"> 
+               <a class="button icon button-positive ion-camera" ng-click="takePhotoD4()"></a>
+               <a ui-sref="photos" class="button icon button-positive  ion-image" ng-click="takePhotoDD4()"></a>
+               <a ui-sref="photos" class="button icon button-positive  ion-trash-a"  ng-click="deleteimage4()"></a>
+              </div>
+
+      </div>
+     
+      <button style="border-radius: 50px; width: 80%; margin-left: 10%;" ng-click="suivant(observation)" class="button icon-right ion-chevron-right button-block button-assertive">
+        {{ 'SUIVANT' | translate }}
+      </button>
+
+     <div style="height:75px;"></div>
+  </ion-content>
+
+</ion-view>
